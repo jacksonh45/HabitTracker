@@ -43,7 +43,7 @@ struct AddHabit: View {
                                     .frame(width: geo.size.width - 20, height: 80)
                                 VStack(alignment: .leading){
                                     Text("What's the habit?")
-                                    TextField("Add Name for the habit...", text: $name)
+                                    TextField("Add Name for the habit...", text:$name)
 
                                 }
                                 .padding(.init(top: 10, leading: 20, bottom: 0, trailing: 40))

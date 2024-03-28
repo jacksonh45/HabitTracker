@@ -5,14 +5,21 @@
 //  Created by Jackson Harrison on 3/26/24.
 //
 
-import SwiftUI
+import Foundation
 
-struct DataExtention: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+extension Date {
+    var stringValue: String {
+        return DateFormatter.localizedString(from: self, dateStyle: .medium, timeStyle: .none)
     }
-}
 
-#Preview {
-    DataExtention()
+    var isToday: Bool {
+        let calendar = Calendar.current
+        return calendar.isDateInToday(self)
+    }
+
+    var isYesterday: Bool {
+        let calendar = Calendar.current
+        return calendar.isDateInYesterday(self)
+    }
 }
